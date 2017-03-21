@@ -1,0 +1,6 @@
+{
+  "refect-next: basic typescript refect-next template (2 spaces)": {
+    "prefix": "refectn",
+    "body": "import * as React from 'react';\nimport refect, { BaseReducer, BaseTasks } from 'react-refect-next';\n\nclass State {\n\n}\n\nclass Reducer extends BaseReducer<State> {\n\n}\n\nclass Tasks extends BaseTasks<Tasks & Reducer, State, any> {\n\n}\n\nclass Props extends State {\n  actions: Tasks & Reducer\n}\n\nclass View extends React.Component<Props, any> {\n  render() {\n    return (\n      <div></div>\n    );\n  }\n}\n\nexport default refect({\n  State,\n  Reducer,\n  Tasks,\n  View,\n  defaultNamespace: '${1:name}',\n});\n"
+  }
+}
